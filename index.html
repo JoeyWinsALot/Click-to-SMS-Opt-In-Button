@@ -14,29 +14,6 @@
     <span class="sms-button-icon">📱</span> Send Us an SMS
   </button>
 
-  <!-- Optional Modal for Additional Features -->
-  <div id="smsModal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
-      <span class="close-button" aria-label="Close">&times;</span>
-      <h2 id="modalTitle">Send Us a Message</h2>
-      <p id="modalDescription">Customize your message below before sending.</p>
-      <form id="smsForm">
-        <!-- Metadata -->
-        <input type="hidden" name="version" value="1.0">
-        <input type="hidden" name="creationDate" value="2023-10-01">
-        <input type="hidden" name="creator" value="JoeyWinsALot">
-
-        <label for="phoneNumber">Your Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1234567890" required pattern="\+?[0-9]{10,15}">
-
-        <label for="smsMessage">Message:</label>
-        <textarea id="smsMessage" name="smsMessage" rows="4" placeholder="Type your message here..." required maxlength="160"></textarea>
-
-        <button type="submit">Send SMS</button>
-      </form>
-    </div>
-  </div>
-
   <!-- Link to External JavaScript -->
   <script src="script.js" defer></script>
 </body>

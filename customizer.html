@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click-to-SMS Customizer</title>
+  <link rel="stylesheet" href="customizer.css">
+</head>
+<body>
+
+  <h1>Customize Your Click-to-SMS Button</h1>
+
+  <form id="customizerForm">
+    <label for="phoneNumber">Phone Number:</label>
+    <input 
+      type="tel" 
+      id="phoneNumber" 
+      name="phoneNumber" 
+      placeholder="+1234567890" 
+      required 
+      pattern="\+?[1-9]\d{1,14}"
+      title="Phone number must include country code and contain 10 to 15 digits."
+      aria-describedby="phoneHelp">
+    <small id="phoneHelp">Enter a valid phone number with country code.</small>
+
+    <label for="smsMessage">Pre-Populated Message:</label>
+    <textarea 
+      id="smsMessage" 
+      name="smsMessage" 
+      rows="4" 
+      placeholder="Your message here..." 
+      required 
+      maxlength="160"
+      aria-describedby="messageHelp"></textarea>
+    <small id="messageHelp">Message should not exceed 160 characters.</small>
+
+    <label for="buttonColor">Button Color:</label>
+    <input 
+      type="color" 
+      id="buttonColor" 
+      name="buttonColor" 
+      value="#28a745"
+      aria-describedby="colorHelp">
+    <small id="colorHelp">Choose a color for the button.</small>
+
+    <label for="buttonTextColor">Button Text Color:</label>
+    <input 
+      type="color" 
+      id="buttonTextColor" 
+      name="buttonTextColor" 
+      value="#ffffff"
+      aria-describedby="textColorHelp">
+    <small id="textColorHelp">Choose a color for the button text.</small>
+
+    <label for="buttonText">Button Text:</label>
+    <input 
+      type="text" 
+      id="buttonText" 
+      name="buttonText" 
+      value="Send SMS" 
+      required
+      aria-describedby="buttonTextHelp">
+    <small id="buttonTextHelp">Enter the text to display on the button.</small>
+
+    <input type="hidden" name="version" value="1.0">
+    <input type="hidden" name="creationDate" value="2023-10-01">
+    <input type="hidden" name="creator" value="JoeyWinsALot">
+
+    <button type="submit">Generate Embed Code</button>
+  </form>
+
+  <h2>Your Embed Code:</h2>
+  <textarea 
+    id="embedCode" 
+    rows="6" 
+    readonly 
+    placeholder="Your embed code will appear here...">
+<!-- Metadata -->
+<!-- Version: 1.0 -->
+<!-- Creation Date: 2023-10-01 -->
+<!-- Creator: JoeyWinsALot -->
+</textarea>
+
+  <script src="customizer.js"></script>
+</body>
+</html>
